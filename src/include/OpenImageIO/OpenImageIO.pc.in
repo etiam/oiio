@@ -4,7 +4,7 @@ libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: OpenImageIO
-Description: @CPACK_PACKAGE_DESCRIPTION_SUMMARY@
+Description: OpenImageIO is a library for reading and writing images.
 Version: @OIIO_VERSION_MAJOR@.@OIIO_VERSION_MINOR@.@OIIO_VERSION_PATCH@
 Libs: -L${libdir} -lOpenImageIO -lOpenImageIO_Util
 Cflags: -I${includedir}/OpenImageIO

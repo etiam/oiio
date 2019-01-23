@@ -35,6 +35,12 @@ install (FILES ${public_headers}
          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/OpenImageIO
          COMPONENT developer)
 
+# install pkgconfig file                                                            
+configure_file(OpenImageIO/OpenImageIO.pc.in "${CMAKE_BINARY_DIR}/include/OpenImageIO/OpenImageIO.pc" @ONLY) 
+install (FILES "${CMAKE_BINARY_DIR}/include/OpenImageIO/OpenImageIO.pc"
+         DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
+         COMPONENT developer)
+
 file (GLOB fmt_headers OpenImageIO/fmt/*.h)
 install (FILES ${fmt_headers}
          DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/OpenImageIO/fmt
