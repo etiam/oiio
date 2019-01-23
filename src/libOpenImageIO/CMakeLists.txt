@@ -8,7 +8,7 @@ configure_file (imageio_pvt.h.in "${CMAKE_BINARY_DIR}/include/imageio_pvt.h" @ON
 if (VERBOSE)
     message(STATUS "Create OpenImageIO.h from OpeImageIO.pc.in")
 endif ()
-configure_file(OpenImageIO.pc.in "${CMAKE_BINARY_DIR}/lib/pkgconfig/OpenImageIO.pc" @ONLY)
+configure_file(OpenImageIO.pc.in "${CMAKE_INSTALL_LIBDIR}/pkgconfig/OpenImageIO.pc" @ONLY)
 
 file (GLOB libOpenImageIO_hdrs ../include/OpenImageIO/*.h)
 
